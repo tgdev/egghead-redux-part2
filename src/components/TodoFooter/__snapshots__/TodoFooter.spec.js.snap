@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoFooter component renders TodoFooter correctly 1`] = `
+<p>
+  Show:
+   
+  <Connect(FilterLink)
+    filter="SHOW_ALL"
+  >
+    All
+  </Connect(FilterLink)>
+   
+  <Connect(FilterLink)
+    filter="SHOW_ACTIVE"
+  >
+    Active
+  </Connect(FilterLink)>
+   
+  <Connect(FilterLink)
+    filter="SHOW_COMPLETED"
+  >
+    Completed
+  </Connect(FilterLink)>
+</p>
+`;
