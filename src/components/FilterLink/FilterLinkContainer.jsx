@@ -5,19 +5,15 @@ import { setVisibilityFilter } from 'actions/visibility-filter.actions';
 
 import FilterLink from './FilterLink';
 
-const mapStateToProps = (state, ownProps) => {
-  return {
-    active: ownProps.filter === state.visibilityFilter
-  };
-};
+const mapStateToProps = (state, ownProps) => ({
+  active: ownProps.filter === state.visibilityFilter
+});
 
-const mapDispatchToProps = (dispatch, ownProps) => {
-  return {
-    handleFilter: () => {
-      dispatch(setVisibilityFilter(ownProps.filter));
-    }
-  };
-};
+const mapDispatchToProps = (dispatch, ownProps) => ({
+  handleFilter() {
+    dispatch(setVisibilityFilter(ownProps.filter));
+  }
+});
 
 const FilterLinkContainer = connect(
   mapStateToProps,

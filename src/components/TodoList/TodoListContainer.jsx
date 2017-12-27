@@ -6,19 +6,15 @@ import getVisibleTodos from 'utils/get-visible-todos';
 
 import TodoList from 'components/TodoList/TodoList';
 
-const mapStateToProps = state => {
-  return {
-    todos: getVisibleTodos(state.todos, state.visibilityFilter)
-  };
-};
+const mapStateToProps = state => ({
+  todos: getVisibleTodos(state.todos, state.visibilityFilter)
+});
 
-const mapDispatchToProps = dispatch => {
-  return {
-    handleTodos: id => {
-      dispatch(toggleTodo(id));
-    }
-  };
-};
+const mapDispatchToProps = dispatch => ({
+  handleTodos(id) {
+    dispatch(toggleTodo(id));
+  }
+});
 
 const TodoListContainer = connect(
   mapStateToProps,
