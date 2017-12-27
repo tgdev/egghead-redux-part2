@@ -1,4 +1,5 @@
 import { createStore } from 'redux';
+import throttle from 'lodash/throttle';
 
 import { loadState, saveState } from './utils/local-storage';
 
@@ -12,10 +13,13 @@ const store = createStore(
   persistedState
 );
 
-store.subscribe(() => {
+// only call saveState every 1000ms
+// to avoid thrashing localStorage
+// every time the store is updated
+store.subscribe(throttle(() => {
   saveState({
     todos: store.getState().todos
   });
-});
+}), 1000);
 
 export default store;
