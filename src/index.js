@@ -2,15 +2,14 @@ import 'babel-polyfill';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
 
-import appStore from './store';
+import configureStore from './configure-store';
 
-import TodoApp from './components/App';
+import Root from './components/Root';
+
+const appStore = configureStore();
 
 ReactDOM.render(
-  <Provider store={appStore}>
-    <TodoApp />
-  </Provider>,
+  <Root store={appStore} />,
   document.getElementById('root')
 );
