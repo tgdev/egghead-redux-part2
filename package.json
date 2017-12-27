@@ -1,7 +1,7 @@
 {
   "name": "egghead-redux-part1",
   "version": "0.1.0",
-  "description": "A repo to help document my progress to Dan Abramov's Getting started with Redux course on egghead.io",
+  "description": "A repo to help document my progress to Dan Abramov's Building React applications with idiomatic redux course on egghead.io",
   "main": "index.js",
   "scripts": {
     "start": "concurrently -k -r -s first \"yarn test:watch\" \"yarn serve\"",
