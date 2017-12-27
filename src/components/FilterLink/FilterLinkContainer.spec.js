@@ -3,12 +3,12 @@ import { shallow } from 'enzyme';
 
 import { FILTER_OPTION_ALL } from 'constants/visibility-filter-options';
 
-import appStore from '../../store';
+import configureStore from '../../configure-store';
 
 import FilterLinkContainer from './FilterLinkContainer';
 
 describe('FilterLinkContainer component', () => {
-
+  const appStore = configureStore();
   const mockWithContext = () => {
     const mockFilterOption = FILTER_OPTION_ALL;
     const storeContext =  { context: { store: appStore } };
