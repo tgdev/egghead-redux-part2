@@ -31,6 +31,9 @@
       "^constants(.*)": "<rootDir>/src/constants/$1",
       "^mocks/(.*)": "<rootDir>/src/mocks/$1",
       "^utils/(.*)": "<rootDir>/src/utils/$1"
+    },
+    "globals": {
+      "widow": true
     }
   },
   "repository": {
